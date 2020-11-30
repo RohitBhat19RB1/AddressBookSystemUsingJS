@@ -20,3 +20,75 @@ class AddressBookContact {
         this.phoneNumber = phoneNumber;
         this.email = email; 
     }
+    //getter and setter method
+    get firstName() {return this.firstName;}
+    set firstName(firstName) {
+        let firstNameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
+        if (firstNameRegex.test(firstName))
+          this.firstName = firstName;
+        else throw 'first name is incorrect!';
+    }
+
+    get lastName() {return this.lastName;}
+    set lastName(lastName) {
+        let lastNameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
+        if (lastNameRegex.test(lastName))
+          this.lastName = lastName;
+        else throw 'last name is incorrect!';
+    }
+
+    get address() {return this.address;}
+    set address(address) {
+        let addressRegex = RegExp('^[A-Za-z]{4,}$');
+        if (addressRegex.test(address))
+          this.address = address;
+        else throw 'address is incorrect!';
+    }
+
+    get city() {return this.city;}
+    set city(city) {
+        let cityRegex = RegExp('^[A-Za-z]{4,}$');
+        if (cityRegex.test(city))
+          this.city = city;
+        else throw 'city is incorrect!';
+    }
+
+    get state() {return this.state;}
+    set state(state) {
+        let stateRegex = RegExp('^[A-Za-z]{4,}$');
+        if (stateRegex.test(state))
+          this.state = state;
+        else throw 'state is incorrect!';
+    }
+
+    get zip() {return this.zip;}
+    set zip(zip) {
+        let zipRegex = RegExp('^\d{5}(?:[-\s]\d{4})?$');
+        if (zipRegex.test(zip))
+          this.zip = zip;
+        else throw 'zip is incorrect!';
+    }
+
+    get phoneNumber() {return this.phoneNumber;}
+    set phoneNumber(phoneNumber) {
+        let phoneNumberRegex = RegExp('^(\\d{2})\\-([6-9]{1}\\d{9})$');
+        if (phoneNumberRegex.test(phoneNumber))
+          this.phoneNumber = phoneNumber;
+        else throw 'phoneNumber is incorrect!';
+    }
+
+    get email() {return this.email;}
+    set email(email) {
+        let emailRegex = RegExp('^([a-z0-9\_\.\-]+)@([a-z]+)\.([a-z]{2,5})(\.[a-z]{2,5})?$');
+        if (emailRegex.test(email))
+          this.email = email;
+        else throw 'email is incorrect!';
+    }
+
+    //method
+    toString() {
+        return "firstName="+this.firstName+" ,lastName="+this.lastName+
+        " ,address="+this.address+" ,city="+this.city+" ,state="+this.state+
+        " ,zip="+this.zip+" ,phoneNumber="+this.phoneNumber+" ,email="+this.email;
+    }
+}
