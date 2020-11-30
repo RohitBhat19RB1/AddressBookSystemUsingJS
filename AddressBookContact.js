@@ -138,3 +138,8 @@ convert.sort((a, b) => {
     return a.city.localeCompare(b.city)
 } )
 console.log("city:"+convert)
+
+convert.sort((a, b) => {
+    return a.state.localeCompare(b.state)
+} )
+console.log("state:"+convert)
