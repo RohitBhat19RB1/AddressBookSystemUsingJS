@@ -115,3 +115,5 @@ console.log(addressBookContainer.get("Raju"))
 
 addressBogitokContainer.delete("Sanoj");
 console.log(addressBookContainer)
+
+console.log(addressBookContainer.size);
