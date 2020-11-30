@@ -133,3 +133,8 @@ convert.sort((a, b) => {
     return a.firstName.localeCompare(b.firstName)
 } )
 console.log("firstName:"+convert)
+
+convert.sort((a, b) => {
+    return a.city.localeCompare(b.city)
+} )
+console.log("city:"+convert)
