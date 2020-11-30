@@ -92,3 +92,6 @@ class AddressBookContact {
         " ,zip="+this.zip+" ,phoneNumber="+this.phoneNumber+" ,email="+this.email;
     }
 }
+
+let addressBookContact = new AddressBookContact("Raju", "Kumar", "Seawoods", "Navi-Mumbai", "Maharashtra", 1004, 55226655, "raju@gmail.com");
+let newAddressBookContact = new AddressBookContact("Sanoj", "Kumar", "Malviya-Nagar", "Saket", "Delhi", 8904, 97226698, "sanoj@gmail.com")
