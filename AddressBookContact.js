@@ -112,3 +112,6 @@ let box = new AddressBookContacts();
 box = addressBookContainer.get("Raju");
 box.lastName = "Sharma";
 console.log(addressBookContainer.get("Raju"))
+
+addressBogitokContainer.delete("Sanoj");
+console.log(addressBookContainer)
