@@ -127,3 +127,9 @@ convert.forEach((data) => {
       counter++
   }
 })
+console.log(counter)
+
+convert.sort((a, b) => {
+    return a.firstName.localeCompare(b.firstName)
+} )
+console.log("firstName:"+convert)
