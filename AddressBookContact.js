@@ -93,5 +93,22 @@ class AddressBookContact {
     }
 }
 
+const addressBookContainer = new Map();
+
 let addressBookContact = new AddressBookContact("Raju", "Kumar", "Seawoods", "Navi-Mumbai", "Maharashtra", 1004, 55226655, "raju@gmail.com");
 let newAddressBookContact = new AddressBookContact("Sanoj", "Kumar", "Malviya-Nagar", "Saket", "Delhi", 8904, 97226698, "sanoj@gmail.com")
+addressBookContainer.set(addressBookContact.firstName, addressBookContact);
+addressBookContainer.set(newAddressBookContact.firstName, newAddressBookContact);
+
+console.log(addressBookContacts.toString());
+try{
+    addressBookContacts.firstName = "Rajan";
+    console.log(addressBookContacts.toString());
+} catch (e) {
+    console.error(e);
+}
+
+let box = new AddressBookContacts();
+box = addressBookContainer.get("Raju");
+box.lastName = "Sharma";
+console.log(addressBookContainer.get("Raju"))
