@@ -119,11 +119,11 @@ console.log(addressBookContainer)
 console.log(addressBookContainer.size);
 
 let convert = Array.from(addressBookContainer.values()) 
-
+let counter = 0;
 convert.forEach((data) => {
   console.log(data);
   if (data.city == "Saket" && data.state == "Delhi" && data.zip === 8904){
       console.log("sorted:"+data)
-
+      counter++
   }
 })
